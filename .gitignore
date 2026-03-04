@@ -1,0 +1,11 @@
+# Godot 4 generated cache/import data
+.godot/
+
+# Android export build folder
+/android/
+
+# C#/.NET build artifacts (if you switch to C# later)
+.mono/
+.tmp/
+bin/
+obj/
