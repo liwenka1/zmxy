@@ -10,9 +10,17 @@ config_version=5
 
 [application]
 
-config/name="新建游戏项目"
+config/name="造梦西游"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+run/main_scene="res://scenes/Main.tscn"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep"
 
 [physics]
 

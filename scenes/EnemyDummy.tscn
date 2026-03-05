@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/enemy_dummy.gd" id="1_dummy_script"]
+
+[sub_resource type="RectangleShape2D" id="1_dummy_shape"]
+size = Vector2(28, 56)
+
+[node name="EnemyDummy" type="StaticBody2D"]
+position = Vector2(520, 312)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_dummy_script")
+
+[node name="Visual" type="Polygon2D" parent="."]
+color = Color(1, 0.45, 0.2, 1)
+polygon = PackedVector2Array(-14, -28, 14, -28, 14, 28, -14, 28)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("1_dummy_shape")
+
+[node name="HPLabel" type="Label" parent="."]
+offset_left = -40.0
+offset_top = -60.0
+offset_right = 80.0
+offset_bottom = -30.0
+horizontal_alignment = 1
+text = "Dummy HP: 6"

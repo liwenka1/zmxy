@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/Player.tscn" id="1_player_scene"]
+[ext_resource type="PackedScene" path="res://scenes/EnemyDummy.tscn" id="2_dummy_scene"]
+
+[sub_resource type="RectangleShape2D" id="1_ground_shape"]
+size = Vector2(1600, 80)
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_player_scene")]
+
+[node name="EnemyDummy" parent="." instance=ExtResource("2_dummy_scene")]
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(640, 440)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+shape = SubResource("1_ground_shape")
+
+[node name="Visual" type="Polygon2D" parent="Ground"]
+color = Color(0.2, 0.22, 0.28, 1)
+polygon = PackedVector2Array(-800, -40, 800, -40, 800, 40, -800, 40)
+
+[node name="HintLabel" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 520.0
+offset_bottom = 76.0
+text = "Move: A/D or <- ->   Jump: Space(Enter)   Attack: J"

@@ -13,3 +13,9 @@ Godot 4 2D action game prototype project.
 - `scenes/`: scene files
 - `scripts/`: gameplay scripts
 - `assets/`: art/audio resources
+
+## Prototype controls
+
+- Move: `A/D` or arrow keys
+- Jump: `Space` (or Enter from `ui_accept`)
+- Attack: `J`
